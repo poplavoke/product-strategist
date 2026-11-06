@@ -1,18 +1,3 @@
-# Локальные переменные окружения
 .env
-.env.*
-
-# Ключи и учётные данные
 *.key
-*.pem
-*.p12
-*.pfx
-*.keystore
-id_rsa*
-id_ed25519*
-*api_key*
-*api-key*
-*credentials*
-*secret*
-keys/
 secrets/
