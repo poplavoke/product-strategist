@@ -1,0 +1,90 @@
+name: Quality
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  markdown:
+    name: Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - name: Получить репозиторий
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Проверить Markdown
+        uses: DavidAnson/markdownlint-cli2-action@v24
+        with:
+          globs: "**/*.md"
+
+  secrets:
+    name: Secrets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Получить полную историю
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Найти случайно добавленные секреты
+        uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  repository-policy:
+    name: Repository policy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Получить репозиторий
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Проверить размер отслеживаемых файлов
+        shell: bash
+        run: |
+          set -euo pipefail
+          max_bytes=$((5 * 1024 * 1024))
+          oversized=0
+
+          while IFS= read -r -d '' file; do
+            size=$(stat --format='%s' "$file")
+            if (( size > max_bytes )); then
+              printf 'Файл превышает лимит 5 МиБ: %s (%s байт)\n' "$file" "$size"
+              oversized=1
+            fi
+          done < <(git ls-files -z)
+
+          exit "$oversized"
+
+      - name: Проверить маркеры конфликтов
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          set +e
+          matches=$(git grep -n -E '^(<<<<<<<|=======|>>>>>>>)' -- .)
+          grep_status=$?
+          set -e
+
+          if (( grep_status == 0 )); then
+            printf 'Найдены маркеры неразрешённого конфликта:\n%s\n' "$matches"
+            exit 1
+          fi
+
+          if (( grep_status > 1 )); then
+            exit "$grep_status"
+          fi
