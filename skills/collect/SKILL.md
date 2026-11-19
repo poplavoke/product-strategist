@@ -11,6 +11,8 @@ description: Сбор допустимых материалов и ведени�
 ## 2) Когда применять
 Применяй на шаге 2 после intake и при обновлении источников. Прочитай AGENTS.md и state.md, продолжай сохранённый шаг.
 
+Методика текущего шага: [knowledge/evidence-and-statuses.md](../../knowledge/evidence-and-statuses.md) — оценить свидетельства и корректно зарегистрировать источники и статусы.
+
 ## 3) Входные файлы
 - `projects/<имя>/brief.md`, `projects/<имя>/state.md`.
 - Существующий `projects/<имя>/sources.csv`, если есть.

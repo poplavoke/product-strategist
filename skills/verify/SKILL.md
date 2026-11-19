@@ -11,6 +11,8 @@ description: Проверка доказательности, согласова
 ## 2) Когда применять
 Применяй на шаге 6 после strategy и после обновлений, затрагивающих выводы или стратегии. Прочитай AGENTS.md и state.md.
 
+Методика текущего шага: [knowledge/checklists.md](../../knowledge/checklists.md) — применяй только список для проверяемой контрольной точки, не отмечай неизвестное как проверенное.
+
 ## 3) Входные файлы
 - brief.md, state.md, sources.csv, options/options.md в `projects/<имя>/`.
 - research/findings.md, research/gaps.md, все три strategy/*.md.

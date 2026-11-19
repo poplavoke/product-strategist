@@ -11,6 +11,8 @@ description: Запись решения, оснований, ответстве
 ## 2) Когда применять
 Применяй после шага 6, при подтверждённом изменении решения и после revisit. Прочитай AGENTS.md и state.md.
 
+Методика текущего шага: [knowledge/checklists.md](../../knowledge/checklists.md) — список «Перед закрытием решения», без подмены выбора человека рекомендацией.
+
 ## 3) Входные файлы
 - brief.md, state.md, sources.csv и verify.md в `projects/<имя>/`.
 - options/options.md с выбором человека, strategy/product.md, strategy/communication.md, strategy/validation-plan.md.
