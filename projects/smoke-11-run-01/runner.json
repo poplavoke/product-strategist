@@ -1,0 +1,9 @@
+{
+  "start": null,
+  "end_observed": "2026-11-21T10:00:04.9815465+03:00",
+  "exit_code": 1,
+  "test": 11,
+  "requested_model": "openai/gpt-6.1-sol#high",
+  "result": "partial",
+  "limitation": "At the completed read of materials/a.md the checker attempted to send the stop message through CLI API. CLI printed help and PowerShell raised NativeCommandError. Stop admission was not confirmed. Checker interrupted its own test session through the API and exported messages. No mid-step stop success is claimed."
+}

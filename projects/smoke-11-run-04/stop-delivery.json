@@ -1,0 +1,64 @@
+﻿{
+    "time":  "2026-11-21T10:06:23.2880084+03:00",
+    "text":  "Подожди. Я уточню задачу",
+    "trigger":  {
+                    "type":  "tool_use",
+                    "timestamp":  1795244783226,
+                    "sessionID":  "ses_e0312f93affeck9S7RvS1z4Lgn",
+                    "part":  {
+                                 "partID":  "prt_1fced75a50010cvBDU16phIM43",
+                                 "sessionID":  "ses_e0312f93affeck9S7RvS1z4Lgn",
+                                 "messageID":  "msg_1fced3ddd001XU6ySNDAsujhUM",
+                                 "type":  "tool",
+                                 "id":  "call_5f54b8bd6fa04cb3b2cd8adcf9b845be",
+                                 "tool":  "read",
+                                 "state":  {
+                                               "status":  "completed",
+                                               "input":  {
+                                                             "path":  "projects/smoke-11/materials/b.md"
+                                                         },
+                                               "output":  "Read file projects/smoke-11/materials/b.md, lines 1-1\n1: Учебное описание B: подсказка на экране настройки",
+                                               "title":  "read",
+                                               "metadata":  {
+                                                                "metadata":  {
+                                                                                 "truncated":  false
+                                                                             },
+                                                                "content":  [
+                                                                                {
+                                                                                    "type":  "text",
+                                                                                    "text":  "Read file projects/smoke-11/materials/b.md, lines 1-1\n1: Учебное описание B: подсказка на экране настройки"
+                                                                                }
+                                                                            ],
+                                                                "providerCall":  {
+                                                                                     "executed":  false,
+                                                                                     "state":  {
+                                                                                                   "itemId":  "fc_07078a2019cc733c016b0142ee279087d2875f64c266705808"
+                                                                                               }
+                                                                                 },
+                                                                "providerResult":  {
+                                                                                       "executed":  false
+                                                                                   },
+                                                                "rawInput":  "{\"path\": \"projects/smoke-11/materials/b.md\"}"
+                                                            },
+                                               "time":  {
+                                                            "start":  1795244783013,
+                                                            "end":  1795244783226
+                                                        }
+                                           }
+                             }
+                },
+    "ack":  {
+                "data":  {
+                             "id":  "msg_1fced7948001u9pDclAj4oD9wF",
+                             "sessionID":  "ses_e0312f93affeck9S7RvS1z4Lgn",
+                             "time":  {
+                                          "created":  1795244783946
+                                      },
+                             "type":  "user",
+                             "payload":  {
+                                             "text":  "Подожди. Я уточню задачу"
+                                         },
+                             "delivery":  "steer"
+                         }
+            }
+}

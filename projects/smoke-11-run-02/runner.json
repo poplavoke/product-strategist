@@ -1,0 +1,9 @@
+{
+  "start": null,
+  "end_observed": "2026-11-21T10:01:48.5575457+03:00",
+  "exit_code": 1,
+  "test": 11,
+  "requested_model": "openai/gpt-6.1-sol#high",
+  "result": "partial",
+  "limitation": "After a material read the checker attempted an HTTP stop request to the existing shared service. It returned UnauthorizedError: Authentication required. No stop message was admitted. The checker interrupted its own test session through the authenticated CLI and exported messages. No mid-step interruption success is claimed."
+}

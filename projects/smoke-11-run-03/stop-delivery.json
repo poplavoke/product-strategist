@@ -1,0 +1,64 @@
+﻿{
+    "time":  "2026-11-21T10:03:14.5053551+03:00",
+    "text":  "Стоп. Я хочу уточнить задачу. Не переходи дальше",
+    "trigger":  {
+                    "type":  "tool_use",
+                    "timestamp":  1795244594473,
+                    "sessionID":  "ses_e0315f0a7ffefPJL7ZLMm3ku5c",
+                    "part":  {
+                                 "partID":  "prt_1fcea94c2001WS94oYCIZcbGSp",
+                                 "sessionID":  "ses_e0315f0a7ffefPJL7ZLMm3ku5c",
+                                 "messageID":  "msg_1fcea847f001pS8e06U6QSBH26",
+                                 "type":  "tool",
+                                 "id":  "call_b795e3bcde5f4fcba1cb5178f52f0e9b",
+                                 "tool":  "read",
+                                 "state":  {
+                                               "status":  "completed",
+                                               "input":  {
+                                                             "path":  "projects/smoke-11/materials/a.md"
+                                                         },
+                                               "output":  "Read file projects/smoke-11/materials/a.md, lines 1-1\n1: Учебное описание A: справка на отдельной странице",
+                                               "title":  "read",
+                                               "metadata":  {
+                                                                "metadata":  {
+                                                                                 "truncated":  false
+                                                                             },
+                                                                "content":  [
+                                                                                {
+                                                                                    "type":  "text",
+                                                                                    "text":  "Read file projects/smoke-11/materials/a.md, lines 1-1\n1: Учебное описание A: справка на отдельной странице"
+                                                                                }
+                                                                            ],
+                                                                "providerCall":  {
+                                                                                     "executed":  false,
+                                                                                     "state":  {
+                                                                                                   "itemId":  "fc_0e9b865518b1a86a016b01422fb39887d286b5bc49bfd1439a"
+                                                                                               }
+                                                                                 },
+                                                                "providerResult":  {
+                                                                                       "executed":  false
+                                                                                   },
+                                                                "rawInput":  "{\"path\": \"projects/smoke-11/materials/a.md\"}"
+                                                            },
+                                               "time":  {
+                                                            "start":  1795244594370,
+                                                            "end":  1795244594473
+                                                        }
+                                           }
+                             }
+                },
+    "ack":  {
+                "data":  {
+                             "id":  "msg_1fcea9752001Atov7mcYmzs9wS",
+                             "sessionID":  "ses_e0315f0a7ffefPJL7ZLMm3ku5c",
+                             "time":  {
+                                          "created":  1795244595027
+                                      },
+                             "type":  "user",
+                             "payload":  {
+                                             "text":  "Стоп. Я хочу уточнить задачу. Не переходи дальше"
+                                         },
+                             "delivery":  "steer"
+                         }
+            }
+}
